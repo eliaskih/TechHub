@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 type Props = {};
 export default function Navbar({}: Props) {
@@ -10,8 +11,10 @@ export default function Navbar({}: Props) {
           <div className="h-0.5 bg-gray-500 mb-1"></div>
           <div className="h-0.5 bg-gray-500"></div>
         </div>
-        <img src={logo} alt="" className="w-4 ml-4 invert" />
-        <h1 className="text-2xl font-black ml-2">TechHub</h1>
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="" className="w-4 ml-4 invert" />
+          <h1 className="text-2xl font-black ml-2">TechHub</h1>
+        </Link>
         <ul className="flex gap-1">
           <li className="py-1 px-3 cursor-pointer text-sm text-gray-600 rounded-full hover:bg-gray-200 hover:text-black">
             about
